@@ -1,3 +1,5 @@
+// Какие принципы нарушены в коде?
+
 import OrderRepository from './OrderRepository';
 import EmailSender from './EmailSender';
 
