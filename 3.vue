@@ -1,11 +1,10 @@
 <template>
   .carousel(ref="carouselElement")
     .slide(v-for="slide of slides")
-      concrete-slide-component(:slide="slide")
+      slot(name="slide" :slide="slide")
 </template>
 
 <script setup>
-  import ConcreteSlideComponent from './ConcreteSlideComponent.vue';
   import createCarousel from './createCarousel'; // Функция создания карусели
 
   const slides = ref([...]); // Массив каких-то слайдов
