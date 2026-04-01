@@ -1,4 +1,6 @@
 // Какие принципы нарушены в коде?
+// Как исправить?
+// Как протестировать?
 
 import OrderRepository from './OrderRepository';
 import EmailSender from './EmailSender';
