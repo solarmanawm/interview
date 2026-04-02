@@ -2,15 +2,15 @@
 // Как исправить?
 // Как протестировать?
 
-import createRepository from './createRepository';
+import createOrderRepository from './createOrderRepository';
 import createEmailSender from './createEmailSender';
 
 export const useOrderService = () => {
-  const repository = createRepository();
+  const orderRepository = createOrderRepository();
   const emailSender = createEmailSender();
 
   const createOrder = (order) => {
-    repository.create(order);
+    orderRepository.create(order);
     emailSender.send(order);
   };
 
