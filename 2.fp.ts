@@ -1,5 +1,7 @@
+type PaymentType = 'card' | 'crypto' | 'base'
+
 interface Payment {
-  type: string;
+  type: PaymentType;
   amount: number;
 }
 
@@ -47,7 +49,7 @@ const payments: Payment[] = [
 function processPayments(paymentsList: Payment[]): void {
   paymentsList.forEach((payment) => {
     if (payment.type === 'card') {
-      (payment as CardPayment).refund();
+      payment.refund();
     }
 
     const cryptoPayment = payment as CryptoPayment;
