@@ -46,8 +46,8 @@ function processPayments(paymentsList: Payment[]): void {
       payment.refund();
     } 
 
-    const сryptoPayment = payment as CryptoPayment;
-    сryptoPayment.confirmTransaction()
+    const cryptoPayment = payment as CryptoPayment;
+    cryptoPayment.confirmTransaction()
     
     if ('walletAddress' in payment) {
       console.log(`Кошелек: ${(payment as CryptoPayment).walletAddress}`);
